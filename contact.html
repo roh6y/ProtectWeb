@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+  <title>Sites-Safe Sites Only</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="../static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="../static/css/responsive.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="hero_area">
+    <!-- header section strats -->
+    <div class="hero_bg_box">
+      <div class="img-box">
+        <img src="images/hero-bg.jpg" alt="">
+      </div>
+    </div>
+    <header class="header_section">
+      <div class="header_top">
+        <div class="container-fluid">
+          <div class="contact_link-container">
+            <a href="" class="contact_link1">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span>
+                Protect Web
+              </span>
+            </a>
+            <a href="" class="contact_link2">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>
+                Call : +91 9991112220
+              </span>
+            </a>
+            <a href="" class="contact_link3">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>
+                vidyodaya@gmail.com
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="index.html">
+              <span>
+                SAFE SITE ONLY!
+              </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""></span>
+            </button>
+
+            <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent" style="background-color:#00000">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{{url_for('home')}}">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('about')}}"> About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('service')}}"> Services </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('go_to')}}">Make your URL SAFE! <span class="sr-only">(current)</span> </a>
+                </li>
+              </ul>
+            </div>
+          <!--</nav>>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- contact section -->
+  
+  <section class="contact_section layout_padding">
+    <div class="contact_bg_box">
+      <div class="img-box">
+        <img src="images/contact-bg.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="heading_container heading_center">
+	<center>
+        <h2>
+          Verify your URL
+        </h2>
+	</center>
+      </div>
+      <div class="">
+        <div class="row">
+          <div class="col-md-7 mx-auto">
+            <form action="/result" method="post" url=url,y_pred=y_pred>
+              <div class="contact_form-container">
+                <div>
+                  <div>
+                    <input type="text" id="url" name="url" placeholder="Enter URL:">
+                  </div>
+                  <div>
+                    <button type="submit" value="Submit" class="file_submit">
+                      Verify
+                    </button>
+	     </form>
+			<h1>Result</h1>
+			{% if url %}
+				{% if y_pred == 1 %}
+					<p>{{ url }} is a genuine URL.</p>
+				{% elif y_pred == -1 %}
+					<p>{{ url }} is a fake URL</p>
+				{% elif y_pred == 0%}
+					<p>{{ url }} seems suspicious.</p>
+				{% endif %}
+			{% endif %}
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end contact section -->
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="info_logo">
+            <a class="navbar-brand" href="index.html">
+              <span>
+               Pricing
+              </span>
+            </a>
+            <p>
+            We have priced the website's full capacity at the price of ₹100.By doing so you can experience the premium facilities that our wesite offers
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_links">
+            <h5>
+             Premium Facilities
+            </h5>
+            <ul>
+              <li>
+                <a href="">
+If the website is safe then there will be an option to redirect yourself to the website.If the website is a phishing website our site will block that website from your device and 
+show how many people have been scammed through that website 
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  
+                </a>
+              </li>
+              <li>
+                <a href="">
+                
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_info">
+            <h5>
+              Contact Us
+            </h5>
+          </div>
+          <div class="info_contact">
+            <a href="" class="">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span>
+               Protect Web
+              </span>
+            </a>
+            <a href="" class="">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>
+                Call : +91 9992221110
+              </span>
+            </a>
+            <a href="" class="">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>
+                vidyodaya@gmail.com
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_form ">
+            <h5>
+              Newsletter
+            </h5>
+            <form action="#">
+              <input type="email" placeholder="Enter your email">
+              <button>
+                Subscribe
+              </button>
+            </form>
+            <div class="social_box">
+              <a href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-youtube" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+
+
+
+
+  <!-- footer section -->
+  <footer class="container-fluid footer_section">
+    <p>
+      &copy; <span id="currentYear"></span> All Rights Reserved. Design by
+      <a href="https://html.design/">Free Html Templates</a>
+    </p>
+  </footer>
+  <!-- footer section -->
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+
+</html>
